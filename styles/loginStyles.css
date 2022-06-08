@@ -1,0 +1,93 @@
+.logo{
+    width: 15rem;
+    margin-bottom: 4.8rem;
+    justify-self: center;
+    display: none;
+}
+/*CONTENEDOR GLOBAL*/
+.login{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+}
+/*CONTENEDOR SECUNDARIO*/
+.login-container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+   /*  max-width: 40rem; */
+    width: 30rem;
+}
+
+
+/*FORMULARIO*/
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+.input{
+    background-color: var(--input-field);
+    border: none;
+    border-radius: 0.8rem;
+    font-size: var(--mm);
+    height: 3rem;
+    padding: 0.6rem;
+    margin-bottom: 1.6rem;
+}
+.primary-button{
+
+    padding: 0.8rem;
+    height: 5rem;
+    border-radius: 0.8rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: var(--mm);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-button{
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.login-container .final-text{
+
+    text-align: center;
+}
+
+
+.sign-up-button{
+    
+    padding: 0.8rem;
+    margin-bottom: 1.6rem;
+    max-width: 40rem;
+    width: 90%;
+    
+    
+    
+    height: 5rem;
+    border-radius: 0.8rem;
+    border: 0.2rem var(--primary-color) solid;
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-size: var(--mm);
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+@media(max-width: 640px){
+    .logo{
+        display: block;
+    }
+}
