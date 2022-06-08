@@ -1,0 +1,21 @@
+:root{
+    --white:#FFFFFF;
+    --black: #000000;
+    --secondary-color:#C7C7C7;
+    --input-field:#F7F7F7;
+    --primary-color:#ACD9B2;
+    --hm:1.8rem;
+    --mm:1.6rem;
+    --sm:1.4rem;
+}
+
+html{
+    font-size:62.5%
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    
+}
+
