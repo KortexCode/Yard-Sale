@@ -1,0 +1,36 @@
+.desktop-menu{
+    width: 15rem;
+    height: auto;
+    border: 0.1rem var(--secondary-color) solid;
+    border-radius: 0.5rem;
+}
+.desktop-menu ul{
+    text-align: end;
+    padding: 0;
+    margin: 2rem 2rem 0 1.8rem;
+    list-style: none;
+}
+.desktop-menu ul li{
+    padding-right: 0.7rem;
+}
+
+.desktop-menu ul li:last-child{
+    border-top: 0.1rem solid var(--secondary-color);
+    
+    
+}
+.desktop-menu ul li a{
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: var(--mm);
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+}
+.desktop-menu ul li:last-child a{
+    margin-top: 1.5rem;
+    font-size: var(--sm);
+    font-weight: 700;
+    color: var(--primary-color);
+    
+}
