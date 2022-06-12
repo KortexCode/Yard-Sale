@@ -1,23 +1,72 @@
-.order-container{ 
+.container{ 
     display: grid;
     place-items: center;
     width: 100vw;
     height: 100vh;
 
 }
-.order-container_info{
+.order-container{
     display: grid;
     grid-template-columns: 40rem;
     grid-template-rows: auto auto 1fr;
 }
-.order-container_info .product-info{
+.order-container h1{
+    margin-bottom: 4rem;
+    font-size: var(--hm);
+    font-weight: 700;
+}
+
+/*Información de fecha y valor total*/
+.order-container .order-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0.3rem 1rem 0.3rem;
+    border-radius: 0.8rem;
+    background-color: var(--input-field);
+
+}
+.order-container .order-info .datos{
+   margin-left: 2rem;
+
+}
+.order-container .order-info .datos p:nth-child(1){
+    
+    font-size: var(--mm);
+    font-weight: 700;
+}
+.order-container .order-info .datos p:nth-child(2){
+    
+    font-size: var(--sm);
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.order-container .order-info p{
+    margin-right: 2rem;
+    font-size: var(--mm);
+    font-weight: 700;
+ 
+}
+
+/*Lista de de productos adquiridos*/
+.order-container .product-info{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.order-container_info .product-info div{
+.order-container .product-info div{
     display: flex;
     align-items: center;
+}
+.order-container .product-info div span{
+    margin-left: 2rem;
+    font-size: var(--sm);
+    font-weight: 500;
+    color: var(--description);
+}
+.order-container .product-info p{
+    font-size: var(--mm);
+    font-weight: 700;
 }
   
 
@@ -26,13 +75,14 @@
     align-self: center;
 } */
 
-.order-container_info .product-info figure{
+.order-container .product-info figure{
     padding: 0;
     margin: 0;
     
 }
-.order-container_info .product-info img{
-    width: 13rem;
-    height: 12rem;
-    border-radius: 0.8rem;
+.order-container .product-info img{
+    width: 12rem;
+    height: 11rem;
+    border-radius: 2rem;
+    /* object-fit: cover; */
 }
