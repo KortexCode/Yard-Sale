@@ -41,42 +41,19 @@
     font-weight: 700;
     color: var(--secondary-color);
 }
-.order-container .order-info p{
+
+.order-container .order-info .datos2 p:nth-child(1){
+    display: inline-block;
     margin-right: 2rem;
+    margin-bottom: 0;
+    margin-top: 0;
     font-size: var(--mm);
     font-weight: 700;
  
 }
 
-/*Lista de de productos adquiridos*/
-.order-container .product-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.order-container .product-info div{
-    display: flex;
-    align-items: center;
-}
-.order-container .product-info div span{
-    margin-left: 2rem;
-    font-size: var(--sm);
-    font-weight: 500;
-    color: var(--description);
-}
-.order-container .product-info p{
-    font-size: var(--mm);
-    font-weight: 700;
+.order-container .order-info .datos2 p:nth-child(2){
+    display: inline-block;
+
 }
 
-.order-container .product-info figure{
-    padding: 0;
-    margin: 0;
-    
-}
-.order-container .product-info img{
-    width: 12rem;
-    height: 11rem;
-    border-radius: 2rem;
-    /* object-fit: cover; */
-}
