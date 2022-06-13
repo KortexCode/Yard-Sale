@@ -1,0 +1,44 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+    
+}
+.menu{
+    display: none;
+}
+.logo{
+    width: 10rem;
+    margin-left: 5rem;
+}
+.nav-left, .nav-right{
+    display: flex;
+   
+}
+.nav-left ul, .nav-right ul{
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-left ul{
+    margin-left: 5.5rem;   
+}
+.nav-right ul{
+    margin-right: 5.5rem;  
+}
+
+.nav-left ul li a, .nav-right ul li a{
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+.nav-left ul li a:hover, .nav-right ul li a:hover{
+    border: 0.1rem var(--primary-color) solid;
+    color: var(--primary-color);
+    
+}
