@@ -1,16 +1,25 @@
 nav{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     height: 6rem;
+    border-bottom: 0.1rem solid var(--white);
+    box-shadow: 0rem 0.3rem 0.4rem rgba(0, 0, 0, 0.046805);
+   
+    
     
 }
 .menu{
     display: none;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 2rem;
 }
 .logo{
     width: 10rem;
     margin-left: 5rem;
 }
+/*Estilos en conjunto*/
 .nav-left, .nav-right{
     display: flex;
    
@@ -24,21 +33,76 @@ nav{
     list-style: none;
 }
 
+/*Estilos sobre la aprte inzqueirza de navbar */
 .nav-left ul{
-    margin-left: 5.5rem;   
+    margin-left: 4rem;   
 }
-.nav-right ul{
-    margin-right: 5.5rem;  
+.nav-left ul li{
+    margin-right: 1rem;
 }
-
-.nav-left ul li a, .nav-right ul li a{
+.nav-left ul li a{
     padding: 0.8rem;
+    border: 0.1rem solid var(--white);
     border-radius: 0.8rem;
+    font-size: var(--mm);
+    font-weight: 700;
     color: var(--secondary-color);
     text-decoration: none;
 }
-.nav-left ul li a:hover, .nav-right ul li a:hover{
+.nav-left ul li a:hover{
     border: 0.1rem var(--primary-color) solid;
+    font-weight: 700;
     color: var(--primary-color);
     
 }
+
+/*Algunos estilos sobre la parte derecha de navbar*/
+.nav-right ul{
+    margin-right: 5.5rem;  
+}
+.nav-right ul .nav-email{
+    font-size: var(--sm);
+    font-weight: 300;
+    color: var(--black);
+}
+.nav-right ul .nav-shopping-icon{
+    position: relative;
+    margin-left: 3rem;
+}
+.nav-right ul .nav-shopping-icon img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.nav-right ul .nav-shopping-icon .nav-indicator{
+    position: absolute;
+    top: -0.4rem;
+    right: -0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-color: var(--primary-color);
+
+}
+
+@media(max-width: 640px){
+    
+    .menu{
+        display: block;
+    }
+    .nav-left ul{
+        display: none;
+    }
+    .nav-right ul{
+        margin-right: 1.5rem;
+    }
+    .nav-right ul .nav-email{
+        display: none;
+    }
+    
+}
+
