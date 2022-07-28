@@ -1,8 +1,9 @@
 
 header{
-    width: 100%;
+    width: auto;
 }
 nav{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,21 +56,33 @@ nav{
     border: 0.1rem var(--primary-color) solid;
     font-weight: 700;
     color: var(--primary-color);
+    cursor: pointer;
     
 }
 
 /*Algunos estilos sobre la parte derecha de navbar*/
 .nav-right ul{
-    margin-right: 5.5rem;  
+    margin-right: 55px;  
 }
 .nav-right ul .nav-email{
+   width: 170px;
+   text-align: center;
+}
+.nav-right ul .nav-email p{
     font-size: var(--sm);
     font-weight: 300;
     color: var(--black);
 }
+.nav-right ul .nav-email p:hover{
+    color: var(--primary-color);
+    transform: scale(1.02);
+    font-weight: 700;
+    cursor: pointer;
+
+}
 .nav-right ul .nav-shopping-icon{
     position: relative;
-    margin-left: 3rem;
+    margin-left: 30px;
 }
 .nav-right ul .nav-shopping-icon img{
     width: 25px;
@@ -77,37 +90,39 @@ nav{
 }
 .nav-right ul .nav-shopping-icon .nav-indicator{
     position: absolute;
-    top: -0.4rem;
-    right: -0.5rem;
+    top: -4px;
+    right: -5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
     font-size: 0.9rem;
     font-weight: 700;
     background-color: var(--primary-color);
 
 }
+
+
 @media(max-width: 940px){
-    nav{
-        width: 940px;
+    .nav-left img{
+        display: none;
     }
 }
 
-@media(max-width: 640px){
-    nav{
-        width: 100%;
-    }
+@media(max-width: 790px){
     .menu{
         display: block;
     }
     .nav-left ul{
         display: none;
     }
+    .nav-left img{
+        display: block;
+    }
     .nav-right ul{
-        margin-right: 1.5rem;
+        margin-right: 20px;
     }
     .nav-right ul .nav-email{
         display: none;

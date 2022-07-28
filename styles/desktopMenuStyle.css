@@ -1,6 +1,10 @@
 .desktop-menu{
-    width: 15rem;
+    position: absolute;
+    top: 59px; 
+    right: 107.9px;
+    width: 150px;
     height: auto;
+    background-color: var(--white);
     border: 0.1rem var(--secondary-color) solid;
     border-radius: 0.5rem;
 }
@@ -34,3 +38,7 @@
     color: var(--primary-color);
     
 }
+
+.unable{
+    display: none;
+} 
