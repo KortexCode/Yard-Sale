@@ -1,15 +1,18 @@
-.container{ 
+.shopping-card-container{ 
+    position: absolute;
+    right: 0;
     display: grid;
     grid-template-columns: auto;
-    position: absolute;
-    box-shadow: 0rem 0rem 0.6rem var(--shadow-border);
-    top: 0;
-    right: 0;
-  
+    margin-top: 6.2px;
+    background-color: var(--white);
+    box-shadow: 0 0 6px var(--shadow-border); 
+}
+.shopping-card-container--unable{
+    display: none;
 }
 .order-container{
     display: grid;
-    grid-template-columns: minmax(25rem, 40rem);
+    grid-template-columns: minmax(250px, 400px);
     grid-template-rows: auto auto auto auto;
     align-items: center;  
 }
@@ -21,9 +24,16 @@
 
 /*Barra de título e iconos*/
 .title-bar{
-    padding:20px 0 20px 20px;
+   
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 46px;
+    padding:0 20px 0 20px;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.046805);
+    margin-right: 0;
+    margin-left: 0;
     margin-bottom: 20px;
-    text-justify: center;
 }
 .order-container .title-bar img:nth-child(1){
     display: none;
@@ -43,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .order-container .product-info div{
     display: flex;
@@ -77,7 +87,7 @@
     align-items: center;
     justify-content: space-between;
     height: 76px;
-    margin-top: 25px;
+    margin-top: 20px;
     margin-bottom: 18px;
     border-radius: 8px;
     background-color: var(--input-field);
@@ -90,7 +100,6 @@
 .order-container .order-info p:nth-child(2){
     
     margin-right: 20px;
-   
     
 }
 .order-container .order-info p{
@@ -119,34 +128,3 @@
     font-weight: bold;
     cursor: pointer;
 }
-/*Mobile*/
-@media(max-width: 640px){
-    .title-bar{
-        display: grid;
-        grid-template-columns: 20% 80%;
-        height: 46px;
-        padding:0 20px 0 20px;
-        align-items: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.046805);
-        margin-right: 0;
-        margin-left: 0;
-        
-
-    }
-    .order-container .title-bar img:nth-child(1){
-        display: block;
-        width: 23px;
-        height: 17px;
-        
-    }
-    .order-container .title-bar img:nth-child(2){
-        display: none;
-    }
-
-    .order-container .order-info{
-        margin-top: 0;
-        margin-bottom: 18px;
-        
-    
-    }
-}  

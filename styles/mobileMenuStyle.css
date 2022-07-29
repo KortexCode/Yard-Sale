@@ -1,12 +1,13 @@
 
 .mobile-menu-container{
     position: absolute;
-    top:62px;
+    top:60px;
     display: grid;
     grid-template-columns: auto;
     height: 435px;
-    padding-top: 10px;
-    margin-left: 18px;
+    padding: 15px 20px 0;
+    box-shadow: 0 0 6px var(--shadow-border); 
+    background-color: var(--white);
    
 }
 
@@ -22,12 +23,10 @@
 .mobile-menu-container div:nth-child(7){
    
     padding-bottom: 10px;
-   
-    
+  
 }
 .mobile-menu-container div:nth-child(8){
-    padding-top: 25px;
-    margin-right: 35px;
+    padding-top: 25px;/*  */
     border-top: 1px var(--secondary-color) solid;
 
 }

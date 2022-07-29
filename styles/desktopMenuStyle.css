@@ -5,8 +5,9 @@
     width: 150px;
     height: auto;
     background-color: var(--white);
-    border: 0.1rem var(--secondary-color) solid;
+    box-shadow: 0 0 6px var(--shadow-border); 
     border-radius: 0.5rem;
+    z-index: 2;
 }
 .desktop-menu--unable{
     display: none;
