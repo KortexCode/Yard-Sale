@@ -1,13 +1,16 @@
 .desktop-menu{
     position: absolute;
     top: 59px; 
-    right: 107.9px;
+    right: 119.8px;
     width: 150px;
     height: auto;
     background-color: var(--white);
     border: 0.1rem var(--secondary-color) solid;
     border-radius: 0.5rem;
 }
+.desktop-menu--unable{
+    display: none;
+} 
 .desktop-menu ul{
     text-align: end;
     padding: 0;
@@ -39,6 +42,9 @@
     
 }
 
-.unable{
-    display: none;
-} 
+@media(max-width: 789px){
+    .desktop-menu{
+        display: none;
+    }
+}
+
