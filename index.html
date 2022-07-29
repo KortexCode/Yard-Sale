@@ -10,6 +10,7 @@
         <link href="./styles/navDesktopStyle.css" type="text/css" rel="stylesheet">
         <link href="./styles/desktopMenuStyle.css" type="text/css" rel="stylesheet">
         <link href="./styles/mobileMenuStyle.css" type="text/css" rel="stylesheet">
+        <link href="./styles/shoppingCartStyle.css" type="text/css" rel="stylesheet">
         
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,33 +21,30 @@
     </head>
     <body>
         <header>
+            <!-- NAVIGATION BAR -->
             <nav>
+                <!-- Navigation bar inner elements   -->  
+                <!-- Mobile menu-->
                 <section class="mobile-menu-container mobile-menu-container--unable">
                     <div>
                         <a href="">CATEGORIES</a>
                     </div>
                     <div>
-        
                         <a href="">All</a>
                     </div>
                     <div>
-        
                         <a href="">Clothes</a>
                     </div>
                     <div>
-        
                         <a href="">Electronics</a>
                     </div>
                     <div>
-        
                         <a href="">Furnitures</a>
                     </div>
                     <div>
-        
                         <a href="">Toys</a>
                     </div>
                     <div>
-        
                         <a href="">Others</a>
                     </div>
                     <div>
@@ -54,16 +52,16 @@
                         <a href="">My order</a>
                     </div>
                     <div>
-        
                         <a href="">My account</a>
                     </div>
                     <div class="user">
                         <a href="">maeno323@gmail.com</a>
                         <a href="">Sign up</a>
-                    </div>
-                    
+                    </div>     
                 </section>
+                <!-- Mobile menu icon-->
                 <img class="mobile-menu-icon" src="./icons/icon_menu.svg" alt="menu mobile icon">
+                <!-- left elements-->
                 <div class="nav-left">
                     <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
                     <ul>
@@ -75,19 +73,20 @@
                         <li><a href="">Other</a></li>
                     </ul>
                 </div>
-                
+                <!-- right elements-->
                 <div class="nav-right">
                     <ul>
                         <li class="nav-email">
                             <p>maeno323@gmail.com</p>
                         </li>
                         <li class="nav-shopping-icon">
-                            <img src="./icons/icon_shopping_cart.svg" alt="carrito">
+                            <img src="./icons/icon_shopping_cart.svg" alt="shopping car">
                        
                             <div class="nav-indicator">3</div>
                         </li>
                     </ul>
                 </div>
+                <!-- Desktop menu-->
                 <div class="desktop-menu desktop-menu--unable">
                     <ul>
                        <li>
@@ -103,6 +102,60 @@
                 </div>
             </nav>
         </header>
+        <!-- Shooping card menu-->
+        <aside class="shopping-card-container shopping-card-container--unable">
+            
+            <div class="order-container">
+                <div class="title-bar">
+                    <img src="./icons/icon_menu.svg" alt="menu-icon">
+                    <img src="./icons/flechita.svg" alt="left-arrow">
+                    <span>Shopping cart</span>
+                </div>
+
+                <div class="product-info">
+                    <div class="left-side">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike">
+                        </figure>
+                        <span>Bike</span>
+                    </div>
+                    <div class="right-side">
+                        <p>$ 120.00</p>
+                        <img src="./icons/icon_close.png" alt="close-icon">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="left-side">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike">
+                        </figure>
+                        <span>Bike</span>
+                    </div>
+                    <div class="right-side">
+                        <p>$ 120.00</p>
+                        <img src="./icons/icon_close.png" alt="close-icon">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="left-side">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike">
+                        </figure>
+                        <span>Bike</span>
+                    </div>
+                    <div class="right-side">
+                        <p>$ 120.00</p>
+                        <img src="./icons/icon_close.png" alt="close-icon">
+                    </div>
+                </div>
+
+                <div class="order-info">
+                    <p>Total</p>
+                    <p>$ 360.00</p>
+                </div>
+                <button class="primary-button">Checkout</button>
+            </div>               
+        </aside>
 
         <script src="./main.js"></script>
         
