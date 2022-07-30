@@ -1,5 +1,6 @@
 .shopping-card-container{ 
     position: absolute;
+    top:54px;
     right: 0;
     display: grid;
     grid-template-columns: auto;

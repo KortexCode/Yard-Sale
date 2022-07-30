@@ -20,10 +20,7 @@ function openMenuDesktop(){
 
 function openMenuMobile(){
 
-    if(!shoppingMenu.classList.contains('shopping-card-container--unable')){
-        shoppingMenu.classList.toggle('shopping-card-container--unable');
-    }
-
+    shoppingMenu.classList.add('shopping-card-container--unable');
     mobileMenu.classList.toggle('mobile-menu-container--unable');
 
 }
@@ -31,14 +28,8 @@ function openMenuMobile(){
 
 function openShoppingMenu(){
 
-    if(!mobileMenu.classList.contains('mobile-menu-container--unable'))
-    {
-        mobileMenu.classList.toggle('mobile-menu-container--unable');
-    }
-    if(!desktopMenu.classList.contains('desktop-menu--unable'))
-    {
-        desktopMenu.classList.toggle('desktop-menu--unable')
-    }
+    mobileMenu.classList.add('mobile-menu-container--unable');
+    desktopMenu.classList.add('desktop-menu--unable');
     
     shoppingMenu.classList.toggle('shopping-card-container--unable');
 }
