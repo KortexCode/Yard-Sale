@@ -2,8 +2,8 @@
 /*Grid principal de los productos*/
 .cards-container{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 24rem);
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 10px;
     place-content: center;
    
 }
@@ -12,7 +12,7 @@
 products-container(items de la grid)*/
 .products-container{
    
-  margin-top: 3rem;
+  margin-top: 30px;
 }
 .products-container img{
     width: 24rem;
