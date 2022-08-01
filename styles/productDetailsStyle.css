@@ -1,6 +1,7 @@
 
 .product-detail{
-    width: 36rem;
+    width: 340px;
+    padding-bottom: 20px;
     position: absolute;
     right: 0;
     background: #FFFFFF;
@@ -12,40 +13,40 @@
 }
 
 /*Imágen del producto e icono*/
-.icon-container{
+.close-icon{
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     top:1.7rem;
     left: 1.2rem;
-    width: 4rem;
-    height: 4rem;
+    width: 40px;
+    height: 40px;
     background-color: var(--white);
     border-radius: 50%;
 }
-.icon-container:hover{
+.close-icon:hover{
     cursor: pointer;
 }
-.product-detail .aside_product{
+.product-detail figure .aside_product{
     width: 100%;
-    height: 34rem;
-    border-radius: 0 0 2rem 2rem;
+    height: 320px;
+    border-radius: 0 0 20px 20px;
 }
 /*Contenedor de puntos*/
 .point-container{
     display: flex;
     justify-content: center;
-    width: 6rem;
-    margin: 1rem auto;
+    width: 60px;
+    margin: 10px auto;
 }
 .point-container div{
-    width: 0.8rem;
-    height: 0.8rem;
+    width: 8px;
+    height: 8px;
     background-color: var(--secondary-color);
     border-radius: 50%;
-    margin-left: 0.35rem;
-    margin-right: 0.35rem;
+    margin-left: 3.5px;
+    margin-right: 3.5px;
    
 }
 .point-container div:active{
@@ -59,45 +60,26 @@
 
 /*Información textual del producto*/
 .aside_info{
-    margin: 0 3rem;
+    margin: 0 30px;
 }
 .aside_info p:nth-child(1){
-    margin-top: 3rem;
-    margin-bottom: 0.4rem;
+    margin-top: 30px;
+    margin-bottom: 4px;
     font-size: var(--mm);
     font-weight: 700;
 }
 .aside_info p:nth-child(2){
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
     font-size: var(--sm);
     font-weight: 300;
     
 }
 .aside_info p:nth-child(3){
-    margin-bottom: 4rem;
+    margin-bottom: 40px;
     font-size: var(--sm);
     font-weight: 300;
 
 }
-
-/*Botón*/
-/* .primary-button{
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8rem;
-    width: 100%;
-    height: 5rem;
-    margin-bottom: 2rem;
-    border-radius: 0.8rem;
-    border: none;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-size: var(--mm);
-    font-weight: bold;
-    cursor: pointer;
-} */
 @media(max-width: 640px){
     .product-detail{
         width: 100%;
