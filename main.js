@@ -9,6 +9,7 @@ document.querySelector('.nav-shopping-icon').addEventListener('click', openShopp
 const shoppingMenu = document.querySelector('.shopping-card-container');
 const mobileMenu =  document.querySelector('.mobile-menu-container');
 const desktopMenu = document.querySelector('.desktop-menu');
+console.log(desktopMenu.querySelector("ul"));
 
 function openMenuDesktop(){
     /*with conditionals */
@@ -43,16 +44,17 @@ function openShoppingMenu(){
 /*Product list */
 const productList= [];
 /*Product constructor */
-function Producto(name, price, imagen){
+function Producto(name, price, imagen, description){
     this.name = name;
     this.price = price;
     this.imagen = imagen;
+    this.description = description;
 }
 /*Products*/
-productList.push(new Producto("Bike", "120,00", "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"));
-productList.push(new Producto("Hot Toy Gally", "600,00", "https://m.media-amazon.com/images/I/81Bj5c5oryL._AC_SL1422_.jpg"));
-productList.push(new Producto("Xbox Joystick", "30,00", "https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
-productList.push(new Producto("Joystick Arcade", "200,00", "https://http2.mlstatic.com/D_NQ_NP_722764-MCO46490692982_062021-O.webp"));
+productList.push(new Producto("Bike", "120,00", "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","A comfortable bike to ride on any terrain; It has little weight and shock absorbers, no speed control but with big tires and ergonomic handlebars"));
+productList.push(new Producto("Hot Toy Gally", "600,00", "https://m.media-amazon.com/images/I/81Bj5c5oryL._AC_SL1422_.jpg", "Alita: Battle Angel Set in the future of thriving robotic technology, we follow amnesiac cyborg Alita as she finds herself awakened in a future world that she does not recognize."));
+productList.push(new Producto("Xbox Joystick", "30,00", "https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "Thanks to its ergonomics specially designed for the position of your hand, you can spend hours playing in total comfort."));
+productList.push(new Producto("Joystick Arcade", "200,00", "https://http2.mlstatic.com/D_NQ_NP_722764-MCO46490692982_062021-O.webp", "perfect gaming experience: round control buttons + a spherical metal joystick with plastic sleeve for protection against rust, allows Delicate and smooth operation in games, high precision without delay."));
 
 /*Elements Creation in Cards Container Section*/
 for (const producto of productList){
@@ -95,17 +97,79 @@ for (const producto of productList){
 
 
 //PRODUCT DETAIL ASIDE
-document.querySelector('.close-icon').addEventListener("click", closeProductDetail);
+
 const productDetail = document.querySelector('.product-detail');
 
 function closeProductDetail(){
     productDetail.classList.add('product-detail--unable');
 }
 
-function openProductDetail(){
+function openProductDetail(event){
     mobileMenu.classList.add('mobile-menu-container--unable');
     desktopMenu.classList.add('desktop-menu--unable');
     shoppingMenu.classList.add('shopping-card-container--unable');
     productDetail.classList.remove('product-detail--unable');
 
+    const productDetailContainer = document.querySelector('.product-detail-container');
+    
+    const productNameClicked = event.path[1].querySelector("div div p:nth-child(2)").innerText;
+
+    for (const producto of productList) {
+        
+        if(producto.name === productNameClicked){
+            console.log("clikeaste el que era");
+
+          /*   const productDetailContainer = document.createElement("div");
+            productDetailContainer.classList.add('product-detail-container'); */
+
+            const closeIcon = document.createElement("div");
+            closeIcon.classList.add("close-icon");
+            closeIcon.addEventListener("click", closeProductDetail);
+
+            const iconImg = document.createElement("img");
+            iconImg.setAttribute("src", "./icons/icon_close.png");
+            iconImg.setAttribute("alt", "close icon");
+
+            const figure = document.createElement("figure");
+            const productImg = document.createElement("img");
+            productImg.classList.add("aside_product");
+            productImg.setAttribute("src", producto.imagen);
+            productImg.setAttribute("alt", "product img");
+
+            const pointContainer = document.createElement("div");
+            pointContainer.classList.add("point-container");
+            const point = document.createElement("div");
+
+            const asideInfo = document.createElement("div");
+            asideInfo.classList.add("aside_info");
+
+            const productPrice = document.createElement('p');
+            productPrice.innerText = "$"+ producto.price;
+   
+            const productName = document.createElement('p');
+            productName.innerText = producto.name;
+            const productDescription = document.createElement('p');
+            productDescription.innerText = producto.description;
+
+            const button = document.createElement('button');
+            button.classList.add("primary-button");
+
+            const buttonImg =  document.createElement('img');
+            buttonImg.setAttribute("src", "./icons/bt_add_to_cart.svg");
+            buttonImg.setAttribute("alt", "add to cart");
+
+            closeIcon.appendChild(iconImg);
+            figure.appendChild(productImg);
+            pointContainer.appendChild(point);
+            asideInfo.append(productPrice, productName, productDescription);
+            button.append(buttonImg, "Add to cart");
+
+            productDetailContainer.replaceChildren(closeIcon, figure, pointContainer, asideInfo, button);
+            
+            productDetail.append(productDetailContainer);
+
+           
+           
+        }     
+    }
 }
