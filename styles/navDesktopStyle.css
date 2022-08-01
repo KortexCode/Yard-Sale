@@ -84,6 +84,10 @@ nav{
     position: relative;
     margin-left: 30px;
 }
+.nav-right ul .nav-shopping-icon:hover{
+    cursor: pointer;
+}
+
 .nav-right ul .nav-shopping-icon img{
     width: 25px;
     height: 25px;

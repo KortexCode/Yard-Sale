@@ -48,6 +48,8 @@ productList.push(new Producto("Hot Toy Gally", "600,00", "https://m.media-amazon
 
 productList.push(new Producto("Xbox Joystick", "30,00", "https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"));
 
+productList.push(new Producto("Joystick Arcade", "200,00", "https://http2.mlstatic.com/D_NQ_NP_722764-MCO46490692982_062021-O.webp"));
+
 
 /*Elements Creation in main*/
 
@@ -62,7 +64,7 @@ for (const producto of productList){
     productImg.setAttribute('src', producto.imagen);
 
     const productInfo = document.createElement('div');
-    productInfo.classList.add('product-info');
+    productInfo.classList.add('product-information');
 
     const divContainer = document.createElement('div');
 

@@ -4,7 +4,7 @@
     top:60px;
     display: grid;
     grid-template-columns: auto;
-    height: 435px;
+    height: calc(100vh - 60px);
     padding: 15px 20px 0;
     box-shadow: 0 0 6px var(--shadow-border); 
     background-color: var(--white);
@@ -62,5 +62,11 @@
 
     .mobile-menu-container{
         display: none;
+    }
+}
+@media(max-width: 640px){
+
+    .mobile-menu-container{
+        width: 100%;
     }
 }
