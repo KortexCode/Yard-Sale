@@ -37,6 +37,10 @@ function openShoppingMenu(){
     shoppingMenu.classList.toggle('shopping-card-container--unable');
 }
 
+/*Shopping cart elements creation */
+
+
+
 /*MAIN ELEMENTS*/
 
 //CARDS CONTAINER SECTION
@@ -52,7 +56,7 @@ function Producto(name, price, imagen, description){
 }
 /*Products*/
 productList.push(new Producto("Bike", "120,00", "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","A comfortable bike to ride on any terrain; It has little weight and shock absorbers, no speed control but with big tires and ergonomic handlebars"));
-productList.push(new Producto("Hot Toy Gally", "600,00", "https://m.media-amazon.com/images/I/81Bj5c5oryL._AC_SL1422_.jpg", "Alita: Battle Angel Set in the future of thriving robotic technology, we follow amnesiac cyborg Alita as she finds herself awakened in a future world that she does not recognize."));
+productList.push(new Producto("Hot Toy Gally", "600,00", "https://www.aceroymagia.com/Images/articulo/figura-alita-movie-masterpiece/01-Figura-Alita-Movie-Masterpiece.jpg", "Alita: Battle Angel Set in the future of thriving robotic technology, we follow amnesiac cyborg Alita as she finds herself awakened in a future world that she does not recognize."));
 productList.push(new Producto("Xbox Joystick", "30,00", "https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "Thanks to its ergonomics specially designed for the position of your hand, you can spend hours playing in total comfort."));
 productList.push(new Producto("Joystick Arcade", "200,00", "https://http2.mlstatic.com/D_NQ_NP_722764-MCO46490692982_062021-O.webp", "perfect gaming experience: round control buttons + a spherical metal joystick with plastic sleeve for protection against rust, allows Delicate and smooth operation in games, high precision without delay."));
 
@@ -112,16 +116,14 @@ function openProductDetail(event){
 
     const productDetailContainer = document.querySelector('.product-detail-container');
     
+    
     const productNameClicked = event.path[1].querySelector("div div p:nth-child(2)").innerText;
-
+    
     for (const producto of productList) {
         
         if(producto.name === productNameClicked){
             console.log("clikeaste el que era");
-
-          /*   const productDetailContainer = document.createElement("div");
-            productDetailContainer.classList.add('product-detail-container'); */
-
+            /*Aside Creation*/
             const closeIcon = document.createElement("div");
             closeIcon.classList.add("close-icon");
             closeIcon.addEventListener("click", closeProductDetail);
@@ -151,25 +153,15 @@ function openProductDetail(event){
             const productDescription = document.createElement('p');
             productDescription.innerText = producto.description;
 
-            const button = document.createElement('button');
-            button.classList.add("primary-button");
-
-            const buttonImg =  document.createElement('img');
-            buttonImg.setAttribute("src", "./icons/bt_add_to_cart.svg");
-            buttonImg.setAttribute("alt", "add to cart");
-
             closeIcon.appendChild(iconImg);
             figure.appendChild(productImg);
             pointContainer.appendChild(point);
             asideInfo.append(productPrice, productName, productDescription);
-            button.append(buttonImg, "Add to cart");
-
-            productDetailContainer.replaceChildren(closeIcon, figure, pointContainer, asideInfo, button);
+           
+            productDetailContainer.replaceChildren(closeIcon, figure, pointContainer, asideInfo);
             
-            productDetail.append(productDetailContainer);
-
-           
-           
+            
+   
         }     
     }
 }
