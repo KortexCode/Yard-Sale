@@ -1,10 +1,10 @@
 
 .mobile-menu-container{
     position: absolute;
-    top:60px;
+    top:49px;
     display: grid;
     grid-template-columns: auto;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 49px);
     padding: 15px 20px 0;
     box-shadow: 0 0 6px var(--shadow-border); 
     background-color: var(--white);
@@ -58,7 +58,7 @@
     color: var(--primary-color);
 }
 
-@media(min-width: 790px){
+@media(min-width: 640px){
 
     .mobile-menu-container{
         display: none;
