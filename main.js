@@ -38,7 +38,7 @@ productList.push(new Producto("Xbox Joystick", "30.00", "https://images.pexels.c
 productList.push(new Producto("Joystick Arcade", "200,00", "https://http2.mlstatic.com/D_NQ_NP_722764-MCO46490692982_062021-O.webp", "perfect gaming experience: round control buttons + a spherical metal joystick with plastic sleeve for protection against rust, allows Delicate and smooth operation in games, high precision without delay."));
 productList.push(new Producto("CrossCode", "40.00", "https://as01.epimg.net/meristation/imagenes/2020/07/25/analisis/1595662582_790023_1596445817_noticia_normal.jpg", 'A retro-inspired 2D Action RPG set in the distant future. CrossCode combines 16-bit SNES-style graphics with butter-smooth physics, a fast-paced combat system, and engaging puzzle mechanics, served with a gripping sci-fi story.'));
 productList.push(new Producto("Laptop Asus TUF", "1248.00", "https://m.media-amazon.com/images/I/61ZZqfZALAL._AC_SL1200_.jpg", 'Processor: AMD Ryzen 7 4800H 2.90GHz 8-Core Processor (12MB Cache, up to 4.20GHz), NVIDIA GeForce GTX 1660 Ti 6GB GDDR6 Graphics'));
-productList.push(new Producto("gamer genius speakers", "100.60", "https://www.enfasys.net/wp-content/uploads/2016/12/bloggif_585be12b7ab89-768x478.jpeg","Gamer Genius Sw-g2.1 3000 75w Escorpion Tv Led Speakers. Nice sound and powerful bass, this item is special for video games."));
+productList.push(new Producto("gamer speakers", "100.60", "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6489/6489527_sd.jpg","Gamer Sw-g2.1 3000 75w Escorpion Tv Led Speakers. Nice sound and powerful bass, this item is special for video games."));
 
 
 /*HEADER*/

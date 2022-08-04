@@ -1,0 +1,33 @@
+/*HEADER*/
+/*Navigation bar*/
+.nav-left img{
+    display: block;
+}
+nav .nav-left ul{
+    
+    display: none;   
+}
+/*Menus*/
+.shopping-card-container{ 
+    height: calc(100vh - 49px);
+}
+/*MAIN*/
+/*Main container*/
+main .nav-left-container{
+    position: relative;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+}
+
+main .nav-left--unable{
+    display: block;
+    
+}
+main .nav-left--unable ul{
+    margin: 0;
+    
+}

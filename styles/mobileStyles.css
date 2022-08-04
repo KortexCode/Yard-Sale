@@ -1,0 +1,63 @@
+/*MOBILE*/
+/*HEADER*/
+.mobile-menu-icon{
+    display: block;
+}
+nav .nav-left ul{
+    display: none;
+}
+.nav-left img{
+    display: block;
+}
+.nav-right ul{
+    margin-right: 20px;
+}
+.nav-right ul .nav-email{
+    display: none;
+}
+    
+/*Menus*/
+.desktop-menu{
+    display: none;
+}
+
+.shopping-card-container{ 
+    width: 100%; 
+    height: calc(100vh - 49px);
+    top:50px;
+}
+
+.mobile-menu-container{
+    width: 100%;
+}
+
+/*MAIN*/
+/*Main container*/
+main .nav-left-container{
+    display: none;
+}
+main .nav-left--unable{
+    display: none;
+}
+.cards-container{
+    
+    grid-template-columns: repeat(auto-fill, 180px);
+  
+}
+.products-container img{
+    width: 180px;
+    height: 160px;  
+}
+.product-information{
+
+    width: 180px;  
+}
+/*Product detail*/
+.product-detail{
+    width: 100%;
+}
+
+.product-detail figure .aside_product{
+    width: 100%;
+    height: 375px; 
+}
