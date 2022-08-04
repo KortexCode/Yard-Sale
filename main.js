@@ -8,7 +8,7 @@ document.getElementById('add-to-cart-button').addEventListener('click', addToCar
 
 //VARIABLES
 /*price counter in shopping cart */
-let price = 0;
+let accumulatedPrice = 0;
 /*Menu Selector */
 const shoppingMenu = document.querySelector('.shopping-card-container');
 const mobileMenu =  document.querySelector('.mobile-menu-container');
@@ -17,7 +17,11 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const productDetail = document.querySelector('.product-detail');
 /*shooping cart*/
 const orderContainer = document.querySelector('.order-container');
-const orderInfo = document.querySelector('.order-info p:nth-child(2)');
+const totalPrice = document.querySelector('.order-info p:nth-child(2)');
+/*indicator counter*/
+const indicator = document.querySelector('.nav-indicator');
+let indicatorCounter = 0;
+console.log(indicator);
 /*Product list */
 const productList= [];
 /*Product constructor */
@@ -28,10 +32,13 @@ function Producto(name, price, imagen, description){
     this.description = description;
 }
 /*Products*/
-productList.push(new Producto("Bike", "120,00", "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","A comfortable bike to ride on any terrain; It has little weight and shock absorbers, no speed control but with big tires and ergonomic handlebars"));
-productList.push(new Producto("Hot Toy Gally", "600,00", "https://www.aceroymagia.com/Images/articulo/figura-alita-movie-masterpiece/01-Figura-Alita-Movie-Masterpiece.jpg", "Alita: Battle Angel Set in the future of thriving robotic technology, we follow amnesiac cyborg Alita as she finds herself awakened in a future world that she does not recognize."));
-productList.push(new Producto("Xbox Joystick", "30,00", "https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "Thanks to its ergonomics specially designed for the position of your hand, you can spend hours playing in total comfort."));
+productList.push(new Producto("Bike", "120.00", "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940","A comfortable bike to ride on any terrain; It has little weight and shock absorbers, no speed control but with big tires and ergonomic handlebars"));
+productList.push(new Producto("Hot Toy Gally", "600.00", "https://www.aceroymagia.com/Images/articulo/figura-alita-movie-masterpiece/01-Figura-Alita-Movie-Masterpiece.jpg", "Alita: Battle Angel Set in the future of thriving robotic technology, we follow amnesiac cyborg Alita as she finds herself awakened in a future world that she does not recognize."));
+productList.push(new Producto("Xbox Joystick", "30.00", "https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "Thanks to its ergonomics specially designed for the position of your hand, you can spend hours playing in total comfort."));
 productList.push(new Producto("Joystick Arcade", "200,00", "https://http2.mlstatic.com/D_NQ_NP_722764-MCO46490692982_062021-O.webp", "perfect gaming experience: round control buttons + a spherical metal joystick with plastic sleeve for protection against rust, allows Delicate and smooth operation in games, high precision without delay."));
+productList.push(new Producto("CrossCode", "40.00", "https://as01.epimg.net/meristation/imagenes/2020/07/25/analisis/1595662582_790023_1596445817_noticia_normal.jpg", 'A retro-inspired 2D Action RPG set in the distant future. CrossCode combines 16-bit SNES-style graphics with butter-smooth physics, a fast-paced combat system, and engaging puzzle mechanics, served with a gripping sci-fi story.'));
+productList.push(new Producto("Laptop Asus TUF", "1248.00", "https://m.media-amazon.com/images/I/61ZZqfZALAL._AC_SL1200_.jpg", 'Processor: AMD Ryzen 7 4800H 2.90GHz 8-Core Processor (12MB Cache, up to 4.20GHz), NVIDIA GeForce GTX 1660 Ti 6GB GDDR6 Graphics'));
+productList.push(new Producto("gamer genius speakers", "100.60", "https://www.enfasys.net/wp-content/uploads/2016/12/bloggif_585be12b7ab89-768x478.jpeg","Gamer Genius Sw-g2.1 3000 75w Escorpion Tv Led Speakers. Nice sound and powerful bass, this item is special for video games."));
 
 
 /*HEADER*/
@@ -64,9 +71,10 @@ function openShoppingMenu(){
 }
 /*Shopping cart elements creation */
 function addToCart(event){
-    
     let productCardsName;
     let productDetailName;
+    indicatorCounter++
+    indicator.innerText = String(indicatorCounter)
 
     /*With this it knows where the click was done*/
     /*Product Cards */
@@ -101,6 +109,7 @@ function addToCart(event){
              const imgIcon = document.createElement('img');
             imgIcon.setAttribute('src', "./icons/icon_close.png");
             imgIcon.setAttribute('alt', "close icon");
+            imgIcon.addEventListener('click', removeShoppingCartProduct)
 
             figure.appendChild(productImg);
             leftSide.append(figure, productName);
@@ -109,18 +118,27 @@ function addToCart(event){
             productInfo.append(leftSide, rightSide);
             orderContainer.appendChild(productInfo);
 
-            price = parseInt(producto.price)+price;
-            console.log(price);
-            orderInfo.innerText = '$ '+String(price);
-
-
+            accumulatedPrice = parseFloat(producto.price)+accumulatedPrice;
+            totalPrice.innerText ='$ '+String(accumulatedPrice.toFixed(2));
         }
     }   
 }
 
-function removeShoppingCartProduct(){
+function removeShoppingCartProduct(event){
 
-    orderInfo.innerText = '$ '+String(price);
+    indicatorCounter--
+    indicator.innerText = String(indicatorCounter)
+    /*subtracted to total price */
+    const productName = event.composedPath()[2].querySelector('.left-side span').innerText;
+   
+    for (const producto of productList) { 
+        if(producto.name === productName){
+            accumulatedPrice = accumulatedPrice.toFixed(2) - parseFloat(producto.price);
+            totalPrice.innerText = '$ '+accumulatedPrice.toFixed(2);
+        }
+    }    
+    /*remove card*/
+    event.composedPath()[2].remove();
 }
 /*MAIN*/
 //CARDS CONTAINER SECTION

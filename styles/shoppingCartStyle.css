@@ -57,10 +57,9 @@
 
 }
 .order-container::-webkit-scrollbar{
- 
     width: 5px;
     background-color: var(--primary-color);
- }
+}
 .order-container .product-info{
     align-self: start;
     display: flex;
@@ -72,6 +71,9 @@
 .order-container .product-info div{
     display: flex;
     align-items: center;
+}
+.order-container .product-info .left-side{
+    width: 60%;
 }
 .order-container .product-info .left-side figure img{
     width: 73px;

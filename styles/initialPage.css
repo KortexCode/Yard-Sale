@@ -3,6 +3,7 @@
     position: relative;
     top: 40px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 main .nav-left--unable{
@@ -14,9 +15,7 @@ main .nav-left--unable{
     grid-template-columns: repeat(auto-fill, 240px);
     gap: 20px;
     width: 100%;
-    place-content: center;
-   
-   
+    place-content: center;   
 }
 
 /*Estilos a los elementos de la clase
@@ -31,8 +30,7 @@ products-container(items de la grid)*/
     width: 240px;
     height: 210px;
     border-radius: 0.8rem;
- 
-   
+    
 }
 
 /*Estilos a los elementos internos de la
@@ -62,6 +60,10 @@ clase product-info*/
 .product-information figure{
     display: flex;
     margin: 0;
+}
+.product-information figure:hover{
+    
+    transform: scale(1.1);
 }
 .product-information figure img{
     width: 4.3rem;
