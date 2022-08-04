@@ -3,8 +3,10 @@ Este proyecto es un ejercicio del curso de Web Developer de Platzi para la creac
 
 Aquí pueden encontrarse los diseños originales propuestos:
 
-#####diseño mobile[link](https://www.figma.com/file/bcEVujIzJj5PNIWwF9pP2w/Platzi_YardSale)
-#####diseño Desktop[link](https://www.figma.com/file/bcEVujIzJj5PNIWwF9pP2w/Platzi_YardSale?node-id=0%3A999)
+Diseño mobile
+[link](https://www.figma.com/file/bcEVujIzJj5PNIWwF9pP2w/Platzi_YardSale)
+Diseño Desktop
+[link](https://www.figma.com/file/bcEVujIzJj5PNIWwF9pP2w/Platzi_YardSale?node-id=0%3A999)
 
 
 
