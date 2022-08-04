@@ -192,6 +192,7 @@ nav{
     display: grid;
     grid-template-columns: auto;
     width: 384px;
+    height: calc(100vh - 50.499px);
     background-color: var(--white);
     box-shadow: 0 0 2px var(--shadow-border);
     
@@ -280,7 +281,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
+    height: 80px;
     margin-top: 5px;
     margin-bottom: 15px;
     border-radius: 8px;

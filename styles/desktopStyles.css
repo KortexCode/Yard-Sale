@@ -2,3 +2,7 @@
 .nav-left img{
     display: none;
 }
+
+.order-info{
+    height: 60px;
+}
