@@ -49,7 +49,7 @@
 .order-container{
     display: grid;
     grid-template-columns: minmax(280px, 100%);
-    align-items: center; 
+    grid-template-rows: repeat(auto-fill, 85px);
     height: 250px;
     overflow-y: scroll;
     overscroll-behavior-y:contain;
@@ -62,6 +62,7 @@
     background-color: var(--primary-color);
  }
 .order-container .product-info{
+    align-self: start;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,10 +74,10 @@
     align-items: center;
 }
 .order-container .product-info .left-side figure img{
-    width: 70px;
-    height: 70px;
+    width: 73px;
+    height: 73px;
     border-radius: 20px;
-    /* object-fit: cover; */
+    object-fit: cover;
 }
 .order-container .product-info .left-side span{
     margin-left: 20px;
