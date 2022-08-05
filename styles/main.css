@@ -232,7 +232,7 @@ nav{
     display: grid;
     grid-template-columns: minmax(280px, 100%);
     grid-template-rows: repeat(auto-fill, 85px);
-    height: 250px;
+    height: 330px;
     overflow-y: scroll;
     overscroll-behavior-y:contain;
     scroll-snap-type: y mandatory;
@@ -278,6 +278,7 @@ nav{
     
 }
 .order-info{
+    align-self: end;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -304,6 +305,8 @@ nav{
     font-weight: 700;
 }
 .order-container-button{
+    display: flex;
+    align-items: end;
     margin: 0 20px 10px;
 
 }
@@ -435,12 +438,15 @@ main .nav-left--unable{
     position: fixed;
     top:50.49px;
     width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: calc(100vh - 50.49px);
     padding-bottom: 10px;
     right: 0;
     box-shadow: 0px 0px 6px var(--shadow-border);
     border-radius: 5px;  
-    background: #FFFFFF;
+    background: var(--white);
     overflow-y: scroll;
     overscroll-behavior-y: contain;
     
@@ -518,7 +524,6 @@ main .nav-left--unable{
 
 /*Global primary button styles*/
 .primary-button{ 
-    justify-self: center; 
     display: flex;
     justify-content: center;
     align-items: center;

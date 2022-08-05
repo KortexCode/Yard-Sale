@@ -3,6 +3,8 @@
 document.querySelector('.nav-email').addEventListener('click', openMenuDesktop);
 document.querySelector('.mobile-menu-icon').addEventListener('click', openMenuMobile);
 document.querySelector('.nav-shopping-icon').addEventListener('click', openShoppingMenu);
+/*closed shopping menu with left arrow*/
+document.querySelector('.shopping-card-container .title-bar img:nth-child(2)').addEventListener('click', openShoppingMenu);
 /*buttons*/
 document.getElementById('add-to-cart-button').addEventListener('click', addToCart);
 
@@ -21,7 +23,6 @@ const totalPrice = document.querySelector('.order-info p:nth-child(2)');
 /*indicator counter*/
 const indicator = document.querySelector('.nav-indicator');
 let indicatorCounter = 0;
-console.log(indicator);
 /*Product list */
 const productList= [];
 /*Product constructor */
