@@ -191,6 +191,7 @@ nav{
     right: 0;
     display: grid;
     grid-template-columns: auto;
+    grid-template-rows: 70px 1fr 110px 60px;
     width: 384px;
     height: calc(100vh - 50.499px);
     background-color: var(--white);
@@ -232,7 +233,7 @@ nav{
     display: grid;
     grid-template-columns: minmax(280px, 100%);
     grid-template-rows: repeat(auto-fill, 85px);
-    height: 330px;
+    height: auto;
     overflow-y: scroll;
     overscroll-behavior-y:contain;
     scroll-snap-type: y mandatory;
