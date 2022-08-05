@@ -76,17 +76,23 @@ function addToCart(event){
     let productDetailName;
     indicatorCounter++
     indicator.innerText = String(indicatorCounter)
-
+    console.log(event);
     /*With this it knows where the click was done*/
     /*Product Cards */
     if(event.path[2].className==="product-information"){
         
         productCardsName = event.path[2].querySelector('div p:nth-child(2)').innerText;
+    
     }
     /*Product details */
     else if(event.path[1].className==="product-detail"){
         
         productDetailName = event.path[1].querySelector('.product-detail-container .aside_info p:nth-child(2)').innerText;
+        
+    }
+    else if(event.path[1].className==="primary-button"){
+        productDetailName = event.path[2].querySelector('.product-detail-container .aside_info p:nth-child(2)').innerText;
+        
     }
 
     for (const producto of productList) {
